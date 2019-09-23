@@ -33,27 +33,26 @@ var orm = {
       if (err) {
         throw err;
       }
-      console.log(result);
+      // console.log(result);
       cb(result);
     });
   },
-  insertOne: function(table, cols, vals, cb) {
+  insertOne: function(table, column, value, cb) {
     var queryString = 'INSERT INTO ' + table + ' (' + column + ') VALUES ("' + value + '");'
 
     console.log(queryString);
 
-    connection.query(queryString, vals, function(err, result) {
+    connection.query(queryString, value, function(err, result) {
       if (err) {
         throw err;
       }
-
       cb(result);
     });
   },
-  updateOne: function(table, objColVals, condition, cb) {
-    var queryString = "UPDATE " + table + " SET " + objToSql(objColVals) + "WHERE" + condition;
+  updateOne: function(table, updateColVals, condition, cb) {
+    var queryString = "UPDATE " + table + " SET " + objToSql(updateColVals) + "WHERE" + condition;
 
-    console.log(queryString);
+    // console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

@@ -20,7 +20,6 @@ function objToSql(ob) {
       arr.push(key + "=" + value);
     }
   }
-
   // translate array of strings to a single comma-separated string
   return arr.toString();
 }
@@ -49,10 +48,10 @@ var orm = {
       cb(result);
     });
   },
-  updateOne: function(table, updateColVals, condition, cb) {
-    var queryString = "UPDATE " + table + " SET " + objToSql(updateColVals) + "WHERE" + condition;
+  updateOne: function(table, updateColVal, condition, cb) {
+    var queryString = "UPDATE " + table + " SET " + objToSql(updateColVal) + " WHERE " + condition;
 
-    // console.log(queryString);
+    console.log(queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

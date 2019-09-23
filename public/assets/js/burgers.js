@@ -1,8 +1,7 @@
 $(document).on("click", ".eatButton", function () {
     var burgerId = $(this).data("id");
     var eaten = $(this).data("eaten");
-    console.log(eaten)
-
+    
     var newEaten = {
         devoured: eaten
     };
@@ -30,6 +29,6 @@ $(document).on("click", "#addBurger", function(event) {
             location.reload();
         })
     } else {
-        $("#error").text("Please enter a burger name.");
+        $("#error").text("Oops, enter a different Burger please.");
     }
 })

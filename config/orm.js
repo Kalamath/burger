@@ -40,7 +40,6 @@ var orm = {
     var queryString = 'INSERT INTO ' + table + ' (' + column + ') VALUES ("' + value + '");'
 
     console.log(queryString);
-
     connection.query(queryString, value, function(err, result) {
       if (err) {
         throw err;

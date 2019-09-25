@@ -1,0 +1,14 @@
+body {
+    background-image: url(../img/food.png);
+    background-size: auto;
+    font-family: 'Lobster', cursive;
+    text-align: center;
+}
+
+#eatBurger {
+    background-image: url(../img/burger-outline-filled.png);
+    background-size: cover;
+    height: 50px;
+    width: 50px;
+}
+

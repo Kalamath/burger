@@ -16,6 +16,7 @@
 * Express.js
 * Routing
 * HTTP POST Requests
+* Handlebars
 
 ### Coder
 
